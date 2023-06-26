@@ -1,0 +1,140 @@
+.shop_cart.page {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(219, 213, 213, 0.5);
+    z-index: 100;
+    display: flex;
+    height: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+.shop_cart-include {
+    position: absolute;
+    padding: 20px 10px;
+    z-index: 200;
+    width: 540px;
+    height: 100%;
+    background-color: white;
+    transform: translate(-100%);
+    transition: 0.25s ease-in-out;
+}
+
+.shop_cart-item {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+}
+
+.shop_cart-include.display {
+    transform: translate(0%);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.cart-item-image {
+    
+}
+
+.cart-item-title {
+    padding-left: 12px;
+}
+
+.cart-price {
+ 
+}
+
+.price {
+}
+
+.cart-quantity {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-decrease {
+    border: none;
+}
+
+.quantity {
+    width: 30px;
+}
+
+.btn-increase {
+    border: none;
+}
+
+.cart-remove {
+    padding-right: 12px;
+}
+
+.btn-danger {
+    background-color: #ee4d2d;
+    color: white;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 4px;
+}
+
+.button_cart-main {
+    z-index: 300;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #ee4d2d;
+}
+
+.total {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.shop_cart-collection {
+    padding-top: 40px;
+}
+
+.shop_cart-collection {
+    height: 500px;
+    overflow: hidden overlay;
+    overscroll-behavior: contain;
+    will-change: scroll-position;
+}
+
+.shop_cart-collection::-webkit-scrollbar {
+    width: 10px;
+}
+
+.shop_cart-collection:hover::-webkit-scrollbar {
+    /* webkit-scrollbar thuộc tính */
+    display: block;
+    width: 4px;
+}
+
+.shop_cart-collection::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+.shop_cart-collection::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
+}
+
+.shop_cart-collection::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

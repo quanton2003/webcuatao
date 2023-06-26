@@ -1,0 +1,60 @@
+.container__slide-item {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    transition: all 0.9s;
+    /* backface-visibility: hidden; */
+}
+
+.container__slide-img {
+    width: 100%;
+    padding-top: 100%;
+    /* có thể dùng height thay padding-top */
+    border-radius: 5px;
+}
+
+/* content */
+.container__slide {
+    width: 290px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.container__slide-show {
+    transform-style: preserve-3d;
+}
+
+/* transform-style: preserve-3d; tạo ra những chuyển động đè ảnh lên nhau */
+/* k thể thiếu tính chất relative làm gốc để slide item absolute trồng lên */
+
+
+.container__slide-item.first {
+    opacity: 1;
+    transform: translate3d(0, 0, 100px) scale(1);
+    /* translate3d có 3 giá trị tương ứng value1 = same padding-left, value2 = same padding-top, value3 = zoom phóng to thu nhỏ */
+}
+
+/* 80px, 60px , 20px tương tự same like z-index  */
+.container__slide-item.second {
+    opacity: 0;
+    transform: translate3d(0, 0, 200px) scale(1);
+    /* transform: translate3d(-38px , 0, 60px) scale(0.85, 0.85);
+    scale nhận vào 2 giá trị 0.85 , value1 là kích thước chiều rộng , value2 kích thước chiều cao
+    var(--offset-x-second) tương đương với -38px trong:root */
+}
+
+.container__slide-item.third {
+    opacity: 0.9;
+    transform: translate3d(0, 0, 80px) scale(1);
+    /* transform: translate3d(-74px , 0, 20px) scale(0.71, 0.71); */
+    /* scale nhận vào 2 giá trị 0.85 , value1 là kích thước chiều rộng , value2 kích thước chiều cao
+    var(--offset-x-second) tương đương với -74px trong:root */
+}
+
+.container__slide-item.fourth {
+    opacity: 0.1;
+    transform: translate3d(0, 0, 80px) scale(1);
+}

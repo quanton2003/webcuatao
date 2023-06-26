@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Clone</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/shopCart.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&family=Sarina&display=swap">
+</head>
+<body>
+    <div class="app">
+        <div class="button_cart-main">
+            <button class="btn_cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </div>
+        <div class="shop_cart">
+            <div class="shop_cart-include">
+                <div class="close">
+                    <i class="fa-solid fa-delete-left"></i>
+                </div>
+                <div class="shop_cart-collection">
+              
+                </div>
+                <!-- <h2>
+                    Shop cart is Empty
+                </h2> -->
+                <div class="total">
+                    <h2>Total: <span class="price-cart">?</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="header_navbar-include">
+            <!-- NAVBAR -->
+            <div class="navbar_include">
+                <div class="navbar_contain">
+                    <div class="header_navbar">
+                        <img class="header_navbar-logo" src="./images/Logo.png" alt="">
+                        <h2 class="header_navbar-name" >ASSIGNMENT</h2>
+                    </div>
+
+                    <!-- INFOR -->
+                    <div class="header_navbar-infor">
+                        <img class="header_navbar-infor-img" src="./images/ldnh.jpg" alt="">
+                        <h3 class="header_navbar-infor-name">Le Duc Ngoc Hai</h3>
+                    </div>
+
+                    <!-- SEARCH -->
+                    <div class="header_navbar-search">
+                        <input placeholder="Search here..." type="text" class="header_navbar-input">
+                        <button class="header_navbar-search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <!-- CHARTS -->
+                    <div class="header_navbar-charts">
+                       <div class="header_navbar-charts-custom">  <!--   dieu huong nut trai phai   -->
+                            <div class="charts_icon">
+                                <i class="fa-solid fa-chart-pie"></i>
+                                <h3 class="header_navbar-charts-name">Charts</h3>
+                            </div>
+                            <div class="header_navbar-charts-push left">
+                                <span class="default">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="push">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="header_navbar-charts-select">
+                            <ul class="header_navbar-charts-list">
+                                <li class="header_navbar-charts-item">
+                                    <span><i class="fa-regular fa-circle"></i></span>
+                                    <a href="" class="header_navbar-charts-link">ChartsJS</a>
+                                </li>
+                                <li class="header_navbar-charts-item">
+                                    <span><i class="fa-regular fa-circle"></i></span>
+                                    <a href="" class="header_navbar-charts-link">Flot</a>
+                                </li>
+                                <li class="header_navbar-charts-item">
+                                    <span><i class="fa-regular fa-circle"></i></span>
+                                    <a href="" class="header_navbar-charts-link">inline</a>
+                                </li>
+                                <li class="header_navbar-charts-item">
+                                    <span><i class="fa-regular fa-circle"></i></span>
+                                    <a href="" class="header_navbar-charts-link">uPlot</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header_navbar-example">
+                        <div class="header_navbar-example-title">
+                            EXAMPLES
+                        </div>
+                        <ul class="header_navbar-example-list">
+                            <li class="header_navbar-example-item dasboard">
+                                <span><i class="fa-regular fa-calendar-days"></i></span>
+                                <a href="#" class="header_navbar-example-link">Dasboard</a>
+                            </li>
+                            <li class="header_navbar-example-item">
+                                <span><i class="fa-solid fa-image"></i></span>
+                                <a href="#" class="header_navbar-example-link">Gallery</a>
+                            </li>
+                            <li class="header_navbar-example-item">
+                                <span><i class="fa-brands fa-stack-overflow"></i></span>
+                                <a href="#" class="header_navbar-example-link">Stack Overflow</a>
+                            </li>
+                            <li class="header_navbar-example-item flex">
+                                <div class="flex-inc">
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <a href="#" class="header_navbar-example-link">Search</a>
+                                </div>
+                                <div class="header_navbar-charts-icon ">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header_navbar-example-title">
+                            MISCELLANEOUS
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CHUA PHAN HEADER VA CONTAINER -->
+            <div class="home_page">
+                <!--HEADER  -->
+                <div class="header_include">
+                    <ul class="header_menu-list">
+                        <li class="header_menu-item">
+                            <a href="#" class="header_menu-link click">
+                                <i class="fa-solid fa-bars"></i>
+                            </a>
+                        </li>
+                        <li class="header_menu-item">
+                            <a href="#" class="header_menu-link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="header_menu-item">
+                            <a href="#" class="header_menu-link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header_menu-list">
+                        <li class="header_menu-item">
+                            <a href="#" class="header_menu-link">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </li>
+                        <li class="header_menu-item">
+                            <a href="#" class="header_menu-link message">
+                                <i class="fa-regular fa-comments"></i>
+                            </a>
+                        </li>
+                        <li class="header_menu-item">
+                            <a href="#" class="header_menu-link notice">
+                                <i class="fa-regular fa-bell"></i>
+                            </a>
+                        </li>
+                        <li class="header_menu-item">
+                            <a href="#" class="header_menu-link">
+                                <i class="fa-solid fa-maximize"></i>
+                            </a>
+                        </li>
+                        <li class="header_menu-item">
+                            <a href="#" class="header_menu-link">
+                                <i class="fa-brands fa-windows"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="container">
+                    <div class="container_slide-contain">
+                        <div class="grid">
+                            <div class="grid-column">
+                                <div class="container_slide-include first">
+                                    <div class="grid-wrap">
+                                        <div class="container_slide-img">
+                                            <img src="./images/slide3.png" alt="" class="container_slide">
+                                        </div>
+                                        <div class="container_slide-des">
+                                            <h2 class="container_slide-title">
+                                                SOFA VIETNAM
+                                            </h2>
+                                            <h4 class="container_slide-text">
+                                                NEW PRODUCTS
+                                            </h4>
+                                            <p class="container_slide-motal">
+                                                Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
+                                                took a galley of
+                                                type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                            </p>
+                                            <button class="container_btn">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container_slide-include second">
+                                    <div class="grid-wrap">
+                                        <div class="container_slide-img">
+                                            <img src="./images/slide1.jpg" alt="" class="container_slide">
+                                        </div>
+                                        <div class="container_slide-des">
+                                            <h2 class="container_slide-title">
+                                                SOFA VIETNAM
+                                            </h2>
+                                            <h4 class="container_slide-text">
+                                                NEW PRODUCTS
+                                            </h4>
+                                            <p class="container_slide-motal">
+                                                Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
+                                                took a galley of
+                                                type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                            </p>
+                                            <button class="container_btn">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container_slide-include second">
+                                    <div class="grid-wrap">
+                                        <div class="container_slide-img">
+                                            <img src="./images/slide8.jpg" alt="" class="container_slide">
+                                        </div>
+                                        <div class="container_slide-des">
+                                            <h2 class="container_slide-title">
+                                                SOFA VIETNAM
+                                            </h2>
+                                            <h4 class="container_slide-text">
+                                                NEW PRODUCTS
+                                            </h4>
+                                            <p class="container_slide-motal">
+                                                Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
+                                                took a galley of
+                                                type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                            </p>
+                                            <button class="container_btn">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container_slide-include second ">
+                                    <div class="grid-wrap">
+                                        <div class="container_slide-img img-fourth">
+                                            <img src="./images/slide6.png" alt="" class="container_slide">
+                                        </div>
+                                        <div class="container_slide-des">
+                                            <h2 class="container_slide-title">
+                                                SOFA VIETNAM
+                                            </h2>
+                                            <h4 class="container_slide-text">
+                                                NEW PRODUCTS
+                                            </h4>
+                                            <p class="container_slide-motal">
+                                                Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
+                                                took a galley of
+                                                type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                            </p>
+                                            <button class="container_btn">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container_slide-include second ">
+                                    <div class="grid-wrap">
+                                        <div class="container_slide-img img-fourth">
+                                            <img src="./images/slide7.png" alt="" class="container_slide">
+                                        </div>
+                                        <div class="container_slide-des">
+                                            <h2 class="container_slide-title">
+                                                SOFA VIETNAM
+                                            </h2>
+                                            <h4 class="container_slide-text">
+                                                NEW PRODUCTS
+                                            </h4>
+                                            <p class="container_slide-motal">
+                                                Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
+                                                took a galley of
+                                                type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                            </p>
+                                            <button class="container_btn">BUY NOW</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- BUTTON SLIDE -->
+                                <div class="container_slide-btn">
+                                    <button class="btn-left btn">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </button>
+                                    <button class="btn-right btn">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid">
+                        <div class="home_fillter">
+                            <div class="grid-wrap-item">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal_view">
+            <div class="modal_view-page">
+                <div class="product_container">
+                    <div class="product_left">
+                        <div class="product_left-img">
+                            <img src="./images/prd1.jpg" alt="" class="product_left-select">
+                        </div>
+                        <div class="product_left-list">
+                            <div id="sp1" onmouseover="onMouseModal(this.id)" class="product_left-list-item">
+                                <img class="product_left-list-item-img" src="./images/prd1.jpg" alt="">
+                            </div>
+                            <div id="sp2" onmouseover="onMouseModal(this.id)" class="product_left-list-item">
+                                <img class="product_left-list-item-img" src="./images/prd2.jpg" alt="">
+                            </div>
+                            <div id="sp3" onmouseover="onMouseModal(this.id)" class="product_left-list-item">
+                                <img class="product_left-list-item-img" src="./images/prd3.jpg" alt="">
+                            </div>
+                            <div id="sp4" onmouseover="onMouseModal(this.id)" class="product_left-list-item">
+                                <img class="product_left-list-item-img" src="./images/prd4.jpg" alt="">
+                            </div>
+                            <div id="sp5" onmouseover="onMouseModal(this.id)" class="product_left-list-item">
+                                <img class="product_left-list-item-img" src="./images/prd5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_remove">
+                        <button onclick="removeModal()" class="remove_modal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./src/main.js"></script>
+</html>

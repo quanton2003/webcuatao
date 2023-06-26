@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./contain.css">
+</head>
+<body>
+    <div class="container__slide">
+        <div class="container__slide-show">
+            <div class="container__slide-item first">
+                <div style="background: url('./assets/img/slides/slide1.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item second">
+                <div style="background: url('./assets/img/slides/slide2.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item  third">
+                <div style="background: url('./assets/img/slides/slide3.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide4.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide5.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide6.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide7.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide8.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide9.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide10.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide11.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide12.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide13.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+            <div class="container__slide-item fourth">
+                <div style="background: url('./assets/img/slides/slide14.jpg') no-repeat center center / cover"
+                    class="container__slide-img"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        const slideImgs = $$('.container__slide-item');
+        console.log(slideImgs);
+            let imgIndex = 2;
+            function slideShow() {
+                const slideImgFirst = $('.container__slide-item.first')
+                const slideImgSecond = $('.container__slide-item.second')
+                const slideImgThird = slideImgs[imgIndex]
+                // 0,1,2--imgIndex
+                // -------------------slideImgs[imgIndex = 2] == same like contain in() container-slide-item second
+                const slideImgFourth = slideImgs[imgIndex === slideImgs.length - 1 ? 0 : imgIndex + 1]
+                // ------------------------------NẾU imgIndex = slideImgs.length-1 = 13 nếu đúng thì lọt vào bằng 0 nếu sai thì lọt vào imgIndex + 1
+                slideImgFourth.classList.replace('fourth', 'third')
+                slideImgThird.classList.replace('third', 'second')
+                slideImgSecond.classList.replace('second', 'first')
+                slideImgFirst.classList.replace('first', 'fourth')
+                // slideImgFirst đang ở đầu tiên vào vòng lập đổi về fourth luôn
+                imgIndex++;
+                if (imgIndex >= slideImgs.length) {
+                    imgIndex = 0;
+                    // quay trở về cái đầu tiên và tiếp tục replace
+                }
+                // console.log(imgIndex)
+                // console.log(slideImgs.length) đếm từ 1 còn imgIndex đếm từ 0 từ vị trí đầu tiên first  
+                setTimeout(slideShow, 2000)
+                // khi refresh web vòng lập bắt đầu first biến thành fourth imgIndex=2 bằng với item third
+            }
+
+            slideShow();
+</script>
+</html>

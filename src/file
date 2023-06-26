@@ -1,0 +1,30 @@
+ const home = document.querySelectorAll('.home_product')
+    home.forEach(item => {
+        item.addEventListener('mouseover', function (e) {
+            const parentTarget = e.currentTarget.id
+            shopItems.forEach((item) => {
+                if (parentTarget === item.id) {
+                    console.log(parentTarget);
+                    const target = e.currentTarget.classList.add('first')
+                    if (parentTarget === item.id) {
+                        const boxInner = document.querySelectorAll('.item-box__item')
+                        boxInner.forEach((item) => {
+                            item.classList.add('first')
+                        })
+                    }
+                }
+            })
+        })
+    })
+
+    home.forEach(item => {
+        item.addEventListener('mouseout', function (e) {
+            const target = e.currentTarget.classList.remove('first')
+            if (target == target) {
+                const boxInner = document.querySelectorAll('.item-box__item')
+                boxInner.forEach((item) => {
+                    item.classList.remove('first')
+                })
+            }
+        })
+    })
